@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Bill | DNK</title>
+    <link rel="stylesheet" href="billing.css">
+    <link rel = "icon" href = "../resources/logo_transparent.png" type = "image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Order Billing</h1>
+    </header>
+    <main>
+        <section class="order-form">
+            <h2>Customer Information</h2>
+            <form id="billing-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Mobile Number :</label>
+                <input type="text" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Enter 10-digit phone number" required>
+
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+                <label for="pincode">PIN Code:</label>
+                <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" maxlength="6" placeholder="Enter 6-digit PIN code" required>
+
+
+                <h2>Order Summary</h2>
+                <div>
+                    <button type="submit">Place Order</button>
+                    
+                    <button onClick="window.print()">Print this page</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Dainik Niryat Kendra </p>
+    </footer>
+</body>
+</html>

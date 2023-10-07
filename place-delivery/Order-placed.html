@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+    <link rel="stylesheet" href="order-placed.css">
+    <link rel = "icon" href = "../resources/logo_transparent.png" type = "image/x-icon">
+    <style>
+        button{
+            background-color: #bb4646;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 3px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: background-color 0.1s ease-in-out;
+            margin-right: 20px;
+            margin-left: 15px;
+        }
+
+        button:hover {
+            background-color: #f58371;
+            color: black;
+        }
+
+        .disclaimer {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <script src="place-order.js"></script> -->
+    <header>
+        <h1>Order Placed</h1>
+    </header>
+    
+    <br><br>
+    <main>
+        <div class="order-details">
+            <div class="ID">
+                Tracking ID: 
+                <span id="ID"></span>
+                <button onclick="Copyfunc()">Copy ID</button>
+                <div class="disclaimer">
+                    <b>Disclaimer: </b>Tracking ID will get lost after you refresh this page. Make sure to note it down.
+                </div>
+            </div>
+
+            <div class="post">
+                This delivery will first reach the customer's nearest DNK post office: 
+                <span id="PO"></span>
+            </div>
+        </div>
+        
+    <script>
+        document.getElementById('ID').textContent = localStorage.getItem('ID');
+        document.getElementById('PO').innerHTML = localStorage.getItem('PO');
+
+        // localStorage.clear();
+
+       
+        function Copyfunc() {
+            var idSpan = document.getElementById("ID");
+
+            // Check if the <span> element exists and has content
+            if (idSpan) {
+                var textToCopy = idSpan.innerText;
+                var tempInput = document.createElement("input");
+                tempInput.value = textToCopy;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999); // For mobile devices
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+
+                alert("ID copied to clipboard: " + textToCopy);
+            }
+}
+
+    </script>
+    </main>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    
+    <footer>
+        <p>&copy; Dainik Niryat Kendra</p>
+    </footer>
+</body>
+</html>

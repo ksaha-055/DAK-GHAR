@@ -1,0 +1,84 @@
+/** For track order page*/
+
+
+body, h1, h2, form {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+header {
+    /* background-color: #c6451a; */
+    background-color: #bb4646;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(#c6451a, #ffffff, #c6451a);
+}
+
+.order-form, .order-status {
+    background-color: #f5f1f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2, .order-status h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #0b0c0a;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"] {
+    background-color:#f9f6ee;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bb4646;
+    border-radius: 5px;
+}
+
+button {
+    background-color:#d0a58f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c6451a;
+}
+
+#status-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #c6451a;
+}
+
+footer {
+    background-color: #c6451a;
+    /* background: linear-gradient(); */
+    padding: 20px;
+}

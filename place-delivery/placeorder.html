@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requesting delivery</title>
+    <link rel="stylesheet" href="placeorder.css"> <!-- Link to your CSS file -->
+    <link rel = "icon" href = "../resources/logo_transparent.png" type = "image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Place Your Order</h1>
+    </header>
+    <main>
+        
+        <section class="seller-info">
+            <h2>Seller's Information</h2>
+            <form id="seller-form">
+                <label for="seller-name">Seller's Name:</label>
+                <input type="text" id="seller-name" name="seller-name" required>
+
+                <label for="seller-phone">Phone Number:</label>
+                <input type="tel" id="seller-phone" name="seller-phone" required>
+
+                <label for="seller-address">Address:</label>
+                <textarea id="seller-address" name="seller-address" rows="4" required></textarea>
+
+                <label for="seller-pincode">Pincode:</label>
+                <input type="text" id="seller-pincode" name="seller-pincode" pattern="[0-9]{6}" maxlength="6" placeholder="Enter 6-digit PIN code" required>
+            </form>
+        </section>
+
+        <section class="product-info">
+            <h2>Product Information</h2>
+            <form id="product-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+
+                <label for="product-description">Product Description:</label>
+                <textarea id="product-description" name="product-description" rows="4" required></textarea>
+
+                <label for="product-quantity">Quantity:</label>
+                <input type="number" id="product-quantity" name="product-quantity" required>
+
+            </form>
+                <br>
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <label class="custom-file-upload">
+                            <input type="file" id="product-images" name="product-images" multiple accept="image/*" required>
+                            Upload Images
+                        </label>
+                        
+                    </form>
+                
+                
+                
+        
+            
+        </section>
+
+        <section class="customer-info">
+            <h2>Customer's Information</h2>
+            <form id="customer-form">
+                <label for="customer-name">Customer's Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+
+                <label for="customer-phone">Phone Number:</label>
+                <input type="tel" id="customer-phone" name="customer-phone" required>
+
+                <label for="customer-address">Address:</label>
+                <textarea id="customer-address" name="customer-address" rows="4" required></textarea>
+
+                <label for="customer-pincode">Pincode:</label>
+                <div class="pin">
+                    <input type="text" id="customer-pincode" name="pincode" pattern="[0-9]{6}" maxlength="6" placeholder="Enter 6-digit PIN code" required>
+                </div>
+            </form>
+        </section>
+
+        <div class="buttons">
+            <div class="sub">
+                <button>Place Order</button>
+            </div>
+            <button id="reset-button" type="reset">Reset Form</button>
+        </div>
+    </main>
+    <br>
+    <script src="place-order.js"></script>
+
+    <footer>
+        <p>&copy; Dak Ghar Niryat Kendra</p>
+    </footer>
+</body>
+</html>

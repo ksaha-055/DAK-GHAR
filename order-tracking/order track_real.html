@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<center><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking</title>
+    <link rel="stylesheet" href="style_billing_real.css">
+    <link rel="stylesheet" href="style-progress-bar.css">
+    <link rel = "icon" href = "../resources/logo_transparent.png" type = "image/x-icon">
+    <!-- UniIcon CDN Link  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <header>
+        <h1>Order Tracking</h1>
+    </header>
+    <main>
+        <section class="order-form">
+            <h2>Enter your order details</h2>
+            <form id="tracking-form">
+                <label for="order-number">Order Number:</label>
+                <input type="text" id="order-number" name="order-number" required>
+                <button type="submit">Track Order</button>
+            </form>
+        </section>
+        <section class="order-status">
+            <h2>Order Status</h2>
+            <div class="progress-bar">
+            <!-- Progress Bar -->
+            <ul>
+                <li>
+                    <i class="icon uil uil-shopping-cart-alt"></i>
+                    <div class="progress one">
+                        <p>1</p>
+                        <i class="uil uil-check"></i>
+                    </div>
+                    <p class="text">Order Placed</p>
+                </li>
+                <li>
+                    <i class="icon uil uil-location-pin-alt"></i>
+                    <div class="progress two">
+                        <p>2</p>
+                        <i class="uil uil-check"></i>
+                    </div>
+                    <p class="text">Reached Your</p>
+                    <p class="text">Nearest PO</p>
+                </li>
+                <li>
+                    <i class="icon uil uil-truck"></i>
+                    <div class="progress three">
+                        <p>3</p>
+                        <i class="uil uil-check"></i>
+                    </div>
+                    <p class="text">Out For Delivery</p>
+                </li>
+                <li>
+                    <!-- <i class="icon uil uil-exchange"></i> -->
+                    <i class="icon uil uil-check-square"></i>
+                    <div class="progress four">
+                        <p>4</p>
+                        <i class="uil uil-check"></i>
+                    </div>
+                    <p class="text">Delivered</p>
+                </li>
+            </ul>
+            <!-- </div> -->
+
+            <!-- <div id="status-message">Please enter your order number to track your order.</div> -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Dainik Niryat Kendra </p>
+    </footer>
+
+    <script src="progress-bar.js"></script>
+</body>
+</center>
+</html>

@@ -1,0 +1,60 @@
+
+body, h1, div, span, header, footer {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:#e59595
+    font-family: Arial, sans-serif;
+    color: #333; /* Text color for body */
+    display: flex;
+    flex-direction: column;
+    min-height: 105vh; }
+
+header {
+    background-color: #bb4646;
+    text-align: center;
+    padding: 1em 0;
+    color: white; 
+}
+
+
+.order-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.ID, .post {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#ID, #PO {
+    color: #333; 
+    font-weight: bold;
+}
+
+
+.ID, .post {
+    padding: 15px;
+    border: 2px solid #333; 
+    border-radius: 10px; 
+}
+
+
+.ID, .post {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #bb4646;
+    text-align: center;
+    padding: 1em 0;
+    color: white; 
+}
